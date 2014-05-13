@@ -34,7 +34,7 @@ function SparqlClient(endpointSelect, endpointUpdate) {
      * @param onfailure
      */
     this.ask = function(query, onsuccess, onfailure) {
-        HTTP.get(endpointSelect, {query:encodeURIComponent(query)}, null, "application/sparql-results+json;charset=UTF-8", {
+        HTTP.get(endpointSelect, {query:encodeURIComponent(query)}, null, "application/sparql-results+json", {
             200:function(data) {
                 var value = JSON.parse(data)['boolean'];
                 if (onsuccess)onsuccess(String(value) == 'true' ? true : false);

@@ -42,14 +42,17 @@
 
         var SHOWCASE = true;
 
-        var HOST = "fuseki/ds/";
+        //var HOST = "fuseki/ds/";
+        var HOST = "http://fusepool.openlinksw.com/";
 
         var OPTIONS = {
             RDF_LINK : function(uri){showRDF(uri)},
             BASE_URI : HOST+"resource/",
             LANGUAGES_SUPPORTED : ["en","de"],
-            ENDPOINT_SELECT : HOST+"query",
-            ENDPOINT_UPDATE : HOST+"update",
+            //ENDPOINT_SELECT : HOST+"query",
+            ENDPOINT_SELECT : HOST+"sparql-skos/",
+            //ENDPOINT_UPDATE : HOST+"update",
+            ENDPOINT_UPDATE : HOST+"sparql-skos/",
             LANGUAGE : "en",
             DEBUG : false
         }

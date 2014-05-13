@@ -45,7 +45,7 @@ function AuthTokenExtension(editor,container) {
         this.open = function(){
             popup = editor.popup.custom("Login");
 
-            var name = $("<input>");
+            var name = $("<input>").attr("value","skosjs");
             var pwd = $("<input>").attr("type","password");
             var radioToken = $("<input>").attr("type","radio").attr("name","authtype").attr("value","token").attr("id","rToken").attr("checked","true");
             var radioTokenLabel = $("<label>").attr("for","rToken").text("Token Authentication");
